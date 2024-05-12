@@ -1,0 +1,20 @@
+@model Mult;
+
+<h1>Mult</h1>
+<form method="post" asp-action="Mult">
+    <div>
+        <input type="number" class="form-control" asp-for="Num1">
+        <span asp-validation-for="Num1" class="text-danger"></span>
+    </div>
+
+    <div>
+        <input type="number" class="form-control" asp-for="Num2">
+        <span asp-validation-for="Num2" class="text-danger"></span>
+    </div>
+
+    <div>
+        <h2>Умножение: @Model.Result</h2>
+    </div>
+    <input class="back" type="submit" value="Mult"/>
+    <button class="back" asp-action="Index">Назад</button>
+</form>
